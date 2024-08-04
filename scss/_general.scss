@@ -1,0 +1,58 @@
+$bg-heder: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+$bg-white: #fff;
+$bg-team: #f4f5f6;
+$bg-footer: #1e212c;
+$btn-red: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+$btn-opacity: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+// ---------------------------------------------------------------- 
+$white: #fff;
+$secondary: #ffcf2d;
+$success: #03cea4;
+$primary: #FF3F3A;
+$danger: #ff4242;
+$warning: #f89828;
+$info: #5a87fc;
+$gray-900: #1e212c;
+$gray-800: #424551;
+$gray-700: #787a80;
+$gray-600: #9a9ca5;
+$gray-500: #b3b7bc;
+$gray-400: #d7dadd;
+$gray-300: #e5e8ed;
+$gray-200: #f4f5f6;
+// ----------------------------------------------------------------
+@mixin flex($jc, $ai) {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin btn {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 52px;
+  border-radius: 4px;
+  padding: 0px 40px;
+  font-size: 16px;
+  background: $btn-red;
+  color: $white;
+  white-space: nowrap;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container{
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  color: $gray-800;
+}
