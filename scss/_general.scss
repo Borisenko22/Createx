@@ -56,7 +56,7 @@ $gray-200: #f4f5f6;
 
 .button--empty span {
   background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
-  -webkit-background-clip: text;
+  --webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
