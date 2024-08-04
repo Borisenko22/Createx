@@ -1,4 +1,4 @@
-$bg-heder: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+$bg-header: linear-gradient(45deg, rgba(255, 63, 58, .2) 0%, rgba(247, 94, 5, .2) 100%);
 $bg-white: #fff;
 $bg-team: #f4f5f6;
 $bg-footer: #1e212c;
@@ -9,6 +9,7 @@ $white: #fff;
 $secondary: #ffcf2d;
 $success: #03cea4;
 $primary: #FF3F3A;
+$primar-op: rgba(255, 63, 56, 0.12);
 $danger: #ff4242;
 $warning: #f89828;
 $info: #5a87fc;
@@ -28,7 +29,8 @@ $gray-200: #f4f5f6;
   align-items: $ai;
 }
 
-@mixin btn {
+.button{
+  display: inline-block;
   font-weight: 700;
   letter-spacing: 0.3px;
   line-height: 52px;
@@ -38,6 +40,24 @@ $gray-200: #f4f5f6;
   background: $btn-red;
   color: $white;
   white-space: nowrap;
+}
+
+.button--empty {
+  background-image: none;
+  border-left: 2px solid #FF3F3A;
+  border-right: 2px solid #F75E05;
+  background-image: -webkit-linear-gradient(left, #FF3F3A, #F75E05), -webkit-linear-gradient(left, #FF3F3A, #F75E05);
+  background-image: linear-gradient(left, #FF3F3A, #F75E05), linear-gradient(left, #FF3F3A, #F75E05);
+  background-size: 100% 2px;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+.button--empty span {
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .wrapper {
@@ -50,6 +70,7 @@ $gray-200: #f4f5f6;
   max-width: 1260px;
   padding: 0 15px;
   margin: 0 auto;
+  height: 100%;
 }
 
 body {

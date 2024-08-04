@@ -94,6 +94,37 @@ a {
   color: inherit;
 }
 
+.button {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 52px;
+  border-radius: 4px;
+  padding: 0px 40px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.button--empty {
+  background-image: none;
+  border-left: 2px solid #FF3F3A;
+  border-right: 2px solid #F75E05;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FF3F3A), to(#F75E05)), -webkit-gradient(linear, left top, right top, from(#FF3F3A), to(#F75E05));
+  background-image: linear-gradient(left, #FF3F3A, #F75E05), linear-gradient(left, #FF3F3A, #F75E05);
+  background-size: 100% 2px;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+.button--empty span {
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .wrapper {
   min-height: 100%;
   width: 100%;
@@ -104,6 +135,7 @@ a {
   max-width: 1260px;
   padding: 0 15px;
   margin: 0 auto;
+  height: 100%;
 }
 
 body {
@@ -113,6 +145,15 @@ body {
 
 .header {
   font-weight: 700;
+  background: url(../images/decor/shapes-bg.svg) 50% 50%/cover no-repeat, linear-gradient(45deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .header__top-inner {
   display: -webkit-box;
@@ -162,15 +203,6 @@ body {
           align-items: center;
 }
 .header__top-btn {
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  line-height: 52px;
-  border-radius: 4px;
-  padding: 0px 40px;
-  font-size: 16px;
-  background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
-  color: #fff;
-  white-space: nowrap;
   width: 206px;
   height: 52px;
   margin-right: 36px;
@@ -205,4 +237,110 @@ body {
 }
 .header__user-btn:hover {
   color: #FF3F3A;
+}
+
+.header__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.header__body-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.header__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: align-items;
+      -ms-flex-align: align-items;
+          align-items: align-items;
+  color: #1e212c;
+  margin: auto 0;
+}
+.header__content {
+  margin-right: 30px;
+}
+.header__play {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+.header__play svg {
+  margin-right: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 50%;
+}
+.header__play svg:hover {
+  -webkit-box-shadow: 0 0 0 16px rgba(255, 63, 56, 0.12);
+          box-shadow: 0 0 0 16px rgba(255, 63, 56, 0.12);
+}
+.header__title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  color: #1e212c;
+  max-width: 500px;
+  margin-bottom: 60px;
+}
+.header__content-buttons {
+  display: inline-block;
+}
+.header__content-btn {
+  width: 200px;
+  height: 52px;
+}
+.header__content-btn:first-child {
+  width: 148px;
+  height: 52px;
+  margin-right: 30px;
+}
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1e212c;
+  margin-bottom: 80px;
+}
+.header__row > span {
+  background: #FF3F3A;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+.header__row-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__row-item span {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+  margin-right: 12px;
 }
