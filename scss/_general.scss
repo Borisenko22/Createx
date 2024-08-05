@@ -4,6 +4,7 @@ $bg-team: #f4f5f6;
 $bg-footer: #1e212c;
 $btn-red: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
 $btn-opacity: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+$text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 // ---------------------------------------------------------------- 
 $white: #fff;
 $secondary: #ffcf2d;
@@ -20,6 +21,7 @@ $gray-600: #9a9ca5;
 $gray-500: #b3b7bc;
 $gray-400: #d7dadd;
 $gray-300: #e5e8ed;
+$gray-300-op: rgba(229, 232, 237, 0.8);
 $gray-200: #f4f5f6;
 // ----------------------------------------------------------------
 @mixin flex($jc, $ai) {
@@ -86,6 +88,11 @@ body {
 .heading {  
   color: $gray-900;
 }
+
+.heading--text-center{
+  text-align: center;
+}
+
 .heading__subtitle {
   line-height: 150%;
   margin-bottom: 8px;

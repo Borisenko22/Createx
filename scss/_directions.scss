@@ -1,0 +1,172 @@
+.directions{
+  padding-bottom: 180px;
+
+  &__inner{
+    position: relative;
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;  
+      top: 30px;
+      left: -190px;
+      width: 136px;
+      height: 115px;
+      background: url(../images/decor/2.svg) 0 0 no-repeat;
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;  
+      top: 400px;
+      right: -400px;
+      width: 243px;
+      height: 243px;
+      opacity: 0.12;
+      background: url(../images/decor/3.svg) 0 0 no-repeat;
+    }
+
+  }
+
+  &__heading{
+    margin-bottom: 90px;
+  }
+
+  &__filter-box{
+    display: flex;
+    margin-bottom: 56px;
+  }
+
+  &__filter-item{
+    margin-right: 45px;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+
+  &__filter-btn{
+    background-color: transparent;
+    color: $gray-600;
+    border: 1px solid $gray-600;
+    border-radius: 4px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 5px 8px;
+    font-size: 16px;
+  }
+
+  &__filter-btn--active{
+    background: $btn-red;
+    border: none;
+    color: #fff;
+    padding: 6px 8px;
+  }
+
+  &__list{
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__image-box{
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__list-item--empty{
+    background-color: $gray-200;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+      max-width: 240px;
+    }
+  }
+
+  &__list-link {
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 1s;
+    &:hover{
+      box-shadow: $text-shadow;
+      transition: all .3s;
+    }
+  }
+
+  &__link-content{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $gray-300-op;
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &__link-tag{
+    font-weight: 700;
+    color: #fff; 
+    line-height: 1;
+    background-color: #999;
+    padding: 6px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__link-text{
+    color: $gray-700;
+    margin-bottom: 20px;
+  }
+
+  &__link-btn{
+    color: $gray-900;
+    font-weight: 700;
+    display: flex;
+    transition: all .3s;
+
+    &::after{
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url(../images/icons/arrow-right-red.svg) 0 2px / 100% no-repeat;
+      margin-left: 11px;
+    }
+
+    &:hover{
+      color: $primary;
+    }
+  
+  }
+
+  &__list-item--marketing
+  &__link-tag  {
+    background-color: $success;
+  }
+  &__list-item--management
+  &__link-tag {
+    background-color: $info;
+  }
+  &__list-item--hr
+  &__link-tag{
+    background-color: $warning;
+  }
+  &__list-item--design
+  &__link-tag{
+    background-color: #f52f6e;
+  }
+  &__list-item--development
+  &__link-tag{
+    background-color: #7772f1;
+  }
+
+}
